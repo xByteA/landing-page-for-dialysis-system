@@ -11,15 +11,51 @@
     <title>Dialysis Management System | Connected care, clearer workflows</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="scroll-zoom.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
+    <section class="cinematic-intro" aria-labelledby="cinematic-title">
+      <div class="workspace-background" aria-hidden="true"></div>
+      <div class="workspace-shade" aria-hidden="true"></div>
+      <div class="cinematic-copy">
+        <p class="cinematic-kicker">CONNECTED DIALYSIS CARE</p>
+        <h1 id="cinematic-title">Dialysis care.<br />One clear view.</h1>
+        <p>Patient records, treatment sessions, and clinical support in one place.</p>
+      </div>
+      <div class="laptop-anchor" aria-hidden="true">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="laptop-screen-content">
+              <img
+                class="laptop-preview"
+                src="assets/nephroguard-home-dashboard.png"
+                alt="NephroGuard home dashboard showing today's sessions, patients, alerts, and progress"
+              />
+            </div>
+          </div>
+          <div class="laptop-hinge"></div>
+          <div class="laptop-base">
+            <div class="laptop-keyboard"></div>
+            <div class="laptop-trackpad"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cinematic-scroll-cue" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-cue-arrow"></span>
+      </div>
+    </section>
 
     <header class="site-header" id="top">
       <div class="container header-inner">
@@ -57,75 +93,26 @@
       <section class="hero section-shell">
         <div class="container hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-line"></span> The dialysis care workspace</p>
               <h1>Dialysis care.<br /><span>One clear view.</span></h1>
               <p class="hero-description">
-                Manage patients, treatment sessions, medications, and clinical insights in one place.
+                Manage patients, treatment sessions, medications, and clinical insights in one place
               </p>
               <div class="hero-actions">
                 <a class="button button-primary" href="#features">Explore the platform <span aria-hidden="true">↗</span></a>
                 <a class="button button-secondary" href="#services">Explore services</a>
             </div>
             <div class="hero-note">
-              <span class="note-rule" aria-hidden="true"></span>
-              Designed for doctors, nurses, and dialysis unit administrators.
+              Designed for doctors, nurses, and administrators in dialysis units.
             </div>
           </div>
 
           <div class="hero-visual" aria-label="Preview of the dialysis management dashboard">
-            <div class="dashboard-window">
-              <div class="dashboard-topbar">
-                <div class="dashboard-brand">
-                  <span class="mini-mark" aria-hidden="true">+</span>
-                  <span>Dialysis<span class="brand-muted">Care</span></span>
-                </div>
-                <div class="dashboard-topbar-right">
-                  <span class="dashboard-date">Care team workspace</span>
-                  <span class="avatar avatar-small">CT</span>
-                </div>
-              </div>
-              <div class="dashboard-body">
-                <aside class="dashboard-sidebar" aria-hidden="true">
-                  <span class="sidebar-item is-active"><span class="sidebar-glyph">⌂</span>Overview</span>
-                  <span class="sidebar-item"><span class="sidebar-glyph">◉</span>Patients</span>
-                  <span class="sidebar-item"><span class="sidebar-glyph">▦</span>Sessions</span>
-                  <span class="sidebar-item"><span class="sidebar-glyph">▤</span>Reports</span>
-                  <span class="sidebar-item"><span class="sidebar-glyph">⚙</span>Settings</span>
-                  <span class="sidebar-label">WORKSPACE</span>
-                  <span class="sidebar-bottom"><span class="avatar">CT</span><span>Care team<small>Role-based access</small></span></span>
-                </aside>
-                <div class="dashboard-content">
-                  <div class="dashboard-heading">
-                    <div><p class="dash-kicker">DIALYSIS UNIT OVERVIEW</p><h2>Your team, in sync.</h2><p>A clear view of care, sessions, and patient records.</p></div>
-                  </div>
-                  <div class="dash-stats">
-                    <div class="dash-stat"><span>Patient records</span><strong>Patients</strong><small>Histories and reports</small></div>
-                    <div class="dash-stat"><span>Treatment</span><strong>Sessions</strong><small>Vitals and progress</small></div>
-                    <div class="dash-stat"><span>Clinical support</span><strong>Insights</strong><small>Information for your team</small></div>
-                  </div>
-                  <div class="dash-lower">
-                    <div class="schedule-panel">
-                      <div class="panel-heading"><div><strong>Care workflows</strong><small>One connected workspace</small></div></div>
-                      <div class="schedule-head"><span>WORKFLOW</span><span>INCLUDES</span><span>ACCESS</span></div>
-                      <div class="schedule-row"><span class="patient-cell"><i class="patient-dot dot-blue">PT</i><b>Patient records<small>Medical history and reports</small></b></span><span>Profiles</span><em class="status status-active">By role</em></div>
-                      <div class="schedule-row"><span class="patient-cell"><i class="patient-dot dot-slate">TS</i><b>Treatment sessions<small>Vitals and progress</small></b></span><span>Sessions</span><em class="status status-ready">By role</em></div>
-                      <div class="schedule-row"><span class="patient-cell"><i class="patient-dot dot-light">CD</i><b>Clinical support<small>AI summaries and review</small></b></span><span>Insights</span><em class="status status-ready">By role</em></div>
-                    </div>
-                    <div class="care-panel">
-                      <div class="panel-heading"><div><strong>Built for your team</strong><small>One place to work together</small></div></div>
-                      <div class="care-roles">
-                        <span>Doctors</span>
-                        <span>Nurses</span>
-                        <span>Administrators</span>
-                      </div>
-                      <p class="care-caption">Each role sees the tools and information relevant to their work.</p>
-                    </div>
-                  </div>
-                  <div class="dash-footnote"><span class="footnote-icon">i</span> Patient information is organized by role and care team.</div>
-                </div>
-              </div>
-            </div>
-            <div class="visual-caption"><span class="caption-dot"></span> A clearer view of your care team’s day</div>
+            <img
+              class="product-screenshot hero-screenshot"
+              src="assets/nephroguard-home-dashboard.png"
+              alt="NephroGuard nurse workspace dashboard with session, patient, and alert summaries"
+            />
+            <div class="visual-caption"><span class="caption-dot"></span> NephroGuard nurse workspace</div>
           </div>
         </div>
         <div class="hero-bottom-line" aria-hidden="true"></div>
@@ -134,7 +121,7 @@
       <section class="numbers-section section-pad" aria-labelledby="numbers-title">
         <div class="container">
           <div class="section-intro numbers-intro">
-            <div><p class="eyebrow">A closer look at dialysis</p><h2 id="numbers-title">A rhythm of care.<br />A team behind every session.</h2></div>
+            <div><h2 id="numbers-title">A rhythm of care.<br />A team behind every session.</h2></div>
             <p>Dialysis care connects regular treatment with continuous attention.</p>
           </div>
           <div class="stats-row">
@@ -149,7 +136,6 @@
       <section class="challenge-section section-pad" id="about">
         <div class="container challenge-layout">
           <div class="challenge-intro">
-            <p class="eyebrow">Where teams feel the friction</p>
             <h2>Care is complex enough. Your workflows shouldn’t be.</h2>
             <p>When records and routines are disconnected, important details become harder to bring together.</p>
           </div>
@@ -231,41 +217,30 @@
           <article class="feature-story" id="feature-patients">
             <div class="feature-copy">
               <span class="feature-index">01 <span>/</span> PATIENT MANAGEMENT</span>
-              <h3>One clear record. The full patient story.</h3>
-              <p>Medical history, lab results, medications, reports, and previous sessions in one profile.</p>
+              <h3>Patient records, clear at a glance.</h3>
+              <p>See assigned patients and quickly review their details, insurance, and current status.</p>
             </div>
-            <div class="patient-preview preview-frame" aria-label="Patient profile dashboard preview">
-              <div class="preview-toolbar"><span class="preview-breadcrumb">Patients <b>/</b> Patient profile</span><span class="preview-toolbar-date">Patient overview</span></div>
-              <div class="patient-profile">
-                <div class="profile-heading"><span class="profile-avatar">PT</span><div><h4>Patient profile</h4><span>Medical overview</span></div><span class="profile-badge">Care team access</span></div>
-                <div class="profile-details">
-                  <div><span>MEDICAL HISTORY</span><b>Patient record</b></div><div><span>LAB RESULTS</span><b>Available to review</b></div><div><span>TREATMENT</span><b>Session history</b></div>
-                </div>
-                <div class="profile-tabs"><span class="tab-selected">Overview</span><span>Medical history</span><span>Lab results</span><span>Sessions</span></div>
-                <div class="profile-records">
-                  <div class="record-card"><span class="record-icon">+</span><div><span>LAB RESULTS</span><b>Results and reports</b><small>Available for review</small></div><span class="record-arrow">↗</span></div>
-                  <div class="record-card"><span class="record-icon record-icon-alt">▤</span><div><span>MEDICAL HISTORY</span><b>History and treatment</b><small>Organized patient records</small></div><span class="record-arrow">↗</span></div>
-                </div>
-              </div>
+            <div class="patient-preview preview-frame" aria-label="Patient management dashboard preview">
+              <img
+                class="product-screenshot"
+                src="assets/nephroguard-patients.png"
+                alt="NephroGuard patients page with assigned patient records, search, and status filters"
+              />
             </div>
           </article>
 
           <article class="feature-story feature-story-reverse" id="feature-sessions">
             <div class="feature-copy">
               <span class="feature-index">02 <span>/</span> SESSION MONITORING</span>
-              <h3>See how each session is progressing.</h3>
-              <p>Record vital signs and follow treatment progress, including rule-based, color-coded early warning scores.</p>
+              <h3>Keep every session on schedule.</h3>
+              <p>View upcoming and completed treatments with assigned patients, care groups, and scheduled times.</p>
             </div>
-            <div class="session-preview preview-frame" aria-label="Dialysis session monitoring dashboard preview">
-              <div class="preview-toolbar"><span class="preview-breadcrumb">Sessions <b>/</b> Session monitoring</span></div>
-              <div class="session-patient"><span class="profile-avatar">DS</span><div><h4>Dialysis session</h4><span>Treatment record <b>·</b> Care team view</span></div><span class="session-timer"><small>SESSION STATUS</small><b>In progress</b></span></div>
-              <div class="vitals-grid">
-                <div class="vital-item"><span>Blood pressure</span><b>Recorded</b><small>Session vital</small></div>
-                <div class="vital-item"><span>Heart rate</span><b>Recorded</b><small>Session vital</small></div>
-                <div class="vital-item"><span>Temperature</span><b>Recorded</b><small>Session vital</small></div>
-                <div class="vital-item"><span>Early warning score</span><b class="score-value">Calculated</b><small>Rule-based support</small></div>
-              </div>
-              <div class="session-activity"><span>SESSION DOCUMENTATION</span><b>Patient record</b><small>Vitals, early warning score, and treatment progress</small></div>
+            <div class="session-preview preview-frame" aria-label="Dialysis session management dashboard preview">
+              <img
+                class="product-screenshot"
+                src="assets/nephroguard-sessions.png"
+                alt="NephroGuard sessions page listing upcoming and completed dialysis sessions"
+              />
             </div>
           </article>
 
